@@ -1,0 +1,385 @@
+// Base Css Start
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "SF UI Text", sans-serif;
+    color: #001600;
+}
+span,
+a,
+sup,
+sub {
+    display: inline-block;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #001600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: "SF UI Text", sans-serif;
+    color: #3b3c4a;
+}
+.d-flex {
+    display: flex;
+}
+.align-items-center {
+    align-items: center;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.d-none {
+    display: none;
+}
+.d-block {
+    display: block;
+}
+.custom-container {
+    max-width: 1320px;
+    margin-inline: auto;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+// Base Css End
+
+// Reset forgotten password start
+.cmn-main-area {
+    height: 100dvh;
+}
+// Reset forgotten password end
+.bg-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    img {
+        width: 100%;
+        height: 85%;
+    }
+}
+.cmn-main-area {
+    padding-top: 120px;
+    overflow-x: hidden;
+    @media (max-width: 992px) {
+        padding-top: 80px;
+        padding-inline: 20px;
+    }
+    @media (max-width: 500px) {
+        padding-top: 20px;
+        padding-top: 40px;
+    }
+    .logo {
+        text-align: center;
+        margin-bottom: 32px;
+        max-width: 150px;
+        margin-inline: auto;
+        position: relative;
+        color: #eee800;
+        z-index: 3;
+        img {
+            max-width: 150px;
+        }
+    }
+    .copyright-text {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        padding-top: 110px;
+        font-size: 15px;
+        color: #888;
+        padding-bottom: 40px;
+        @media (max-width: 1600px) {
+            padding-top: 70px;
+        }
+    }
+}
+.cmn-wrapper {
+    max-width: 450px;
+    margin-inline: auto;
+    padding: 40px;
+    padding-bottom: 80px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 10px 15px #00000017;
+    position: relative;
+    z-index: 3;
+    @media (max-width: 1600px) {
+        max-width: 400px;
+        padding: 30px;
+        padding-bottom: 80px;
+    }
+    @media (max-width: 500px) {
+        max-width: 400px;
+        padding: 30px 20px;
+        padding-bottom: 80px;
+    }
+    .cmn-form-title {
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 15px;
+        @media (max-width: 1600px) {
+            font-size: 24px;
+        }
+        @media (max-width: 400px) {
+            font-size: 22px;
+        }
+    }
+    .content {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.4;
+        text-align: center;
+        margin-bottom: 20px;
+        @media (max-width: 400px) {
+            font-size: 14px;
+        }
+    }
+    input.form-control {
+        position: relative;
+        height: 50px;
+        padding-left: 60px;
+        padding-right: 55px;
+        box-shadow: none;
+        color: #001600;
+        font-weight: 500;
+        font-size: 14px;
+        &:focus {
+            border-color: #fea900;
+            outline: 0;
+        }
+    }
+    .phone-text {
+        font-size: 14px;
+        margin-bottom: 2px;
+        font-weight: 500;
+        padding-left: 50px;
+    }
+    .form-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .left-email-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+        z-index: 1;
+        background-color: #fea900;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .right-info-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        cursor: help;
+        img {
+            width: 22px;
+            height: 22px;
+        }
+    }
+    .info-hover-content {
+        position: absolute;
+        right: -195px;
+        bottom: -90px;
+        width: 270px;
+        padding: 12px 15px;
+        border-radius: 10px;
+        font-size: 12px;
+        line-height: 1.4;
+        background-color: #318fe6;
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 10;
+        transition: all ease 0.3s;
+        @media (max-width: 767px) {
+            right: 0px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            top: -19px;
+            left: 13%;
+            width: 20px;
+            height: 20px;
+            clip-path: polygon(50% 57%, 0% 100%, 100% 100%);
+            background: #318fe6;
+            @media (max-width: 767px) {
+                right: 8%;
+                left: auto;
+            }
+        }
+    }
+    .button-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 65px;
+        padding-bottom: 40px;
+        @media (max-width: 430px) {
+            gap: 10px;
+        }
+        button {
+            padding: 12px 18px;
+            @media (max-width: 1600px) {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+            @media (max-width: 430px) {
+                padding: 12px 15px;
+            }
+            @media (max-width: 390px) {
+                padding: 12px 8px;
+            }
+        }
+    }
+    .return-text {
+        padding-left: 4px;
+        a {
+            font-size: 15px;
+            color: #007bfc;
+            text-decoration: underline;
+        }
+    }
+}
+
+.right-info-icon:hover + .info-hover-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+// neo admin login start
+.admin-login-main {
+    .cmn-form-title {
+        margin-bottom: 40px;
+    }
+    .left-email-icon {
+        background-color: transparent;
+        &.pwd-icon {
+            img {
+                height: 20px;
+            }
+        }
+    }
+    .right-info-icon {
+        right: 60px;
+    }
+    .keyboard-icon {
+        width: 45px;
+        height: 50px;
+        border: 1px solid #001600;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        padding: 5px;
+        bottom: 0;
+        margin-left: 10px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        cursor: pointer;
+    }
+    input.form-control {
+        padding-left: 48px;
+        padding-right: 90px;
+    }
+    .button-wrapper {
+        padding-bottom: 20px;
+    }
+    .cmn-wrapper {
+        padding-bottom: 70px;
+    }
+}
+
+.other-method-wrapper {
+    text-align: center;
+    overflow-x: hidden;
+    .other-text {
+        position: relative;
+        text-align: center;
+        font-size: 14px;
+        display: inline-block;
+        color: #888;
+        font-weight: 500;
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            left: -110px;
+            top: 50%;
+            width: 90px;
+            height: 1px;
+            background-color: #888;
+        }
+        &::after {
+            left: auto;
+            right: -110px;
+        }
+    }
+    .pwd-tips-wrapper {
+        display: flex;
+        align-items: center;
+        max-width: 350px;
+        margin-top: 30px;
+        margin-inline: auto;
+        justify-content: center;
+        gap: 30px;
+    }
+    .left-pwd-content,
+    .right-tips-content {
+        max-width: 130px;
+        img {
+            width: 45px;
+            height: 45px;
+            background-color: #f0f4fd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        a {
+            color: #0b5ed7;
+        }
+        p {
+            line-height: 1.3;
+            margin: 0;
+            margin-top: 10px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+    }
+}
