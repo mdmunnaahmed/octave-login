@@ -86,6 +86,48 @@
 
     <!-- keyboard script start -->
     <script>
+        // Function to get the position of the input element
+        function getInputPosition() {
+            const inputElement = document.querySelector('.use-keyboard-input');
+            const inputRect = inputElement.getBoundingClientRect();
+            const position = {
+                x: inputRect.left,
+                y: inputRect.top
+            };
+            return position;
+        }
+
+        // Function to update input position on screen resize
+        function updateInputPosition() {
+            const inputPosition = getInputPosition();
+            const xpos = inputPosition.x;
+            const ypos = inputPosition.y;
+            const keyboards = document.querySelectorAll('.keyboard');
+            if (keyboards) {
+                keyboards.forEach(keyboard => {
+                    let offset = 40; // Default offset
+                    if (window.innerWidth < 1600) {
+                        offset = 30; // Adjusted offset for screen width under 1600
+                    }
+                    keyboard.style.left = `${xpos - offset}px`;
+                    keyboard.style.top = `${ypos + 65}px`;
+
+                });
+            }
+
+        }
+
+
+        // Event listener for screen resize
+        window.addEventListener('resize', updateInputPosition);
+
+        // Initial call to update input position
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(updateInputPosition, 100); // Call after 100 milliseconds
+
+        });
+
+
         const Keyboard = {
             elements: {
                 main: null,
@@ -102,7 +144,6 @@
                 value: "",
                 capsLock: false
             },
-
             init() {
                 // Create main elements
                 this.elements.main = document.createElement("div");
@@ -121,11 +162,13 @@
 
                 // Automatically use keyboard for elements with .use-keyboard-input
                 document.querySelectorAll(".use-keyboard-input").forEach(element => {
-                    element.addEventListener("focus", () => {
-                        this.open(element.value, currentValue => {
-                            element.value = currentValue;
+                    if (!element.classList.contains("use-keyboard-input")) {
+                        element.addEventListener("focus", () => {
+                            this.open(element.value, currentValue => {
+                                element.value = currentValue;
+                            });
                         });
-                    });
+                    }
                 });
             },
 
@@ -290,7 +333,6 @@
     </script>
 
     <script>
-
         document.addEventListener("DOMContentLoaded", function () {
             Keyboard.init();
 
@@ -300,12 +342,16 @@
             // Event listener to toggle keyboard visibility when the icon is clicked
             keyboardIcon.addEventListener("click", function () {
                 if (Keyboard.elements.main.classList.contains("keyboard--hidden")) {
-                    Keyboard.open();
                     inputField.focus(); // Focus the input field
+                    Keyboard.open(inputField.value, currentValue => {
+                        inputField.value = currentValue;
+                    });
                 } else {
                     Keyboard.close();
                 }
             });
+            var keyboardWrapper = $(".button-wrapper").detach();
+            $(".button-wrapper").append(keyboardWrapper);
         });
 
 

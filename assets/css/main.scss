@@ -64,7 +64,7 @@ ul {
 
 // Reset forgotten password start
 .cmn-main-area {
-    height: 100dvh;
+    // height: 100dvh;
 }
 // Reset forgotten password end
 .bg-shape {
@@ -82,6 +82,12 @@ ul {
 .cmn-main-area {
     padding-top: 120px;
     overflow-x: hidden;
+    @media (max-width: 1440px) {
+        padding-top: 100px;
+    }
+    @media (max-width: 1200px) {
+        padding-top: 70px;
+    }
     @media (max-width: 992px) {
         padding-top: 80px;
         padding-inline: 20px;
@@ -210,6 +216,9 @@ ul {
         transform: translateY(-50%);
         right: 20px;
         cursor: help;
+        // @media (max-width: 991px) {
+        //     display: none;
+        // }
         img {
             width: 22px;
             height: 22px;
@@ -228,7 +237,7 @@ ul {
         color: #fff;
         opacity: 0;
         visibility: hidden;
-        z-index: 10;
+        z-index: 999;
         transition: all ease 0.3s;
         @media (max-width: 767px) {
             right: 0px;
@@ -301,6 +310,9 @@ ul {
     }
     .right-info-icon {
         right: 60px;
+        @media (max-width: 991px) {
+            right: 20px;
+        }
     }
     .keyboard-icon {
         width: 45px;
@@ -316,10 +328,16 @@ ul {
         border-bottom-right-radius: 5px;
         cursor: pointer;
         z-index: 991;
+        @media (max-width: 991px) {
+            display: none;
+        }
     }
     input.form-control {
         padding-left: 48px;
         padding-right: 90px;
+        @media (max-width: 991px) {
+            padding-right: 55px;
+        }
     }
     .button-wrapper {
         padding-bottom: 20px;
@@ -517,18 +535,23 @@ ul {
 
 // virtual keyboard start
 .keyboard {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-51.8%);
-    bottom: 315px;
+    position: fixed;
+
     width: 450px;
     padding: 5px 0;
     background: #0a52bb;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 25px rgb(0 0 0 / 40%);
     user-select: none;
     transition: bottom 0.4s;
     z-index: 333;
     transition: all ease 0.3s;
+
+    @media (max-width: 1600px) {
+        width: 400px;
+    }
+    @media (max-width: 991px) {
+        display: none;
+    }
 }
 
 .keyboard--hidden {
