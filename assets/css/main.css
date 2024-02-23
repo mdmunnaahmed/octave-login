@@ -216,6 +216,9 @@ ul {
   position: relative;
   margin-bottom: 20px;
 }
+.cmn-wrapper .form-group .error-text {
+  display: none !important;
+}
 .cmn-wrapper .left-email-icon {
   position: absolute;
   top: 0;
@@ -350,6 +353,7 @@ ul {
     right: 20px;
   }
 }
+.admin-login-main .keyboard-icon,
 .admin-login-main .keyboard-icon {
   width: 45px;
   height: 50px;
@@ -366,6 +370,7 @@ ul {
   z-index: 991;
 }
 @media (max-width: 991px) {
+  .admin-login-main .keyboard-icon,
   .admin-login-main .keyboard-icon {
     display: none;
   }
@@ -673,4 +678,121 @@ ul {
 
 .material-icons {
   font-size: 18px;
+}
+
+.update-pass .cmn-form-title {
+  margin-bottom: 10px;
+  text-align: start;
+}
+.update-pass .tips-text {
+  color: #007bfc;
+  margin-bottom: 40px;
+  text-decoration: underline;
+  font-size: 15px;
+  position: relative;
+}
+.update-pass .tips-text .info-hover-content {
+  right: -200px;
+  width: 300px;
+}
+.update-pass .tips-text .info-hover-content::before {
+  top: 55px;
+  left: -6%;
+  transform: rotate(-90deg);
+}
+.update-pass .tips-text ul li {
+  display: flex;
+  line-height: 1;
+  gap: 3px;
+}
+.update-pass .tips-text ul li:not(:last-child) {
+  margin-bottom: 7px;
+}
+.update-pass .tips-text h6 {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.update-pass .tips-text:hover .info-hover-content {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.update-pass .keyboard-icon {
+  top: 24px;
+}
+.update-pass input.form-control {
+  padding-left: 20px;
+  padding-right: 64px;
+}
+.update-pass .not-strong-sine,
+.update-pass .strong-sine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4px;
+}
+.update-pass .not-strong-sine .strong-text,
+.update-pass .strong-sine .strong-text {
+  font-weight: 500;
+}
+.update-pass .not-strong-sine .strong-list,
+.update-pass .strong-sine .strong-list {
+  display: flex;
+  gap: 20px;
+}
+.update-pass .not-strong-sine .strong-list li,
+.update-pass .strong-sine .strong-list li {
+  font-size: 14px;
+  color: #3b3c4a;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.update-pass .not-strong-sine .strong-list li .close-icon,
+.update-pass .strong-sine .strong-list li .close-icon {
+  width: 20px;
+}
+.update-pass .not-strong-sine .strong-list li .check-icon,
+.update-pass .strong-sine .strong-list li .check-icon {
+  display: none;
+}
+.update-pass .not-strong-sine .not-strong,
+.update-pass .strong-sine .not-strong {
+  color: #ff920f;
+}
+.update-pass .not-strong-sine .strong-true,
+.update-pass .strong-sine .strong-true {
+  display: none;
+}
+.update-pass .strong-sine .strong-true {
+  color: #14a800;
+  display: block !important;
+}
+.update-pass .strong-sine .not-strong {
+  display: none;
+}
+.update-pass .strong-sine .check-icon {
+  width: 24px;
+  display: block !important;
+}
+.update-pass .strong-sine .close-icon {
+  display: none;
+}
+.update-pass .button-wrapper {
+  margin-top: 35px;
+}
+
+.cmn-wrapper .error-sine .error-text {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  color: #ff1011;
+  font-weight: 500;
+  font-size: 15px;
+  padding-block: 10px;
+}
+.cmn-wrapper .error-sine .error-text img {
+  width: 16px;
+  height: 16px;
 }

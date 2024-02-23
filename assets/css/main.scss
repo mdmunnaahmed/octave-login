@@ -186,6 +186,9 @@ ul {
     .form-group {
         position: relative;
         margin-bottom: 20px;
+        .error-text {
+            display: none !important;
+        }
     }
     .left-email-icon {
         position: absolute;
@@ -314,6 +317,7 @@ ul {
             right: 20px;
         }
     }
+    .keyboard-icon,
     .keyboard-icon {
         width: 45px;
         height: 50px;
@@ -620,3 +624,126 @@ ul {
 }
 
 // virtual keyboard end
+
+// update password start
+.update-pass {
+    .cmn-form-title {
+        margin-bottom: 10px;
+        text-align: start;
+    }
+    .tips-text {
+        color: #007bfc;
+        margin-bottom: 40px;
+        text-decoration: underline;
+        font-size: 15px;
+        position: relative;
+        .info-hover-content {
+            right: -200px;
+            width: 300px;
+            &::before {
+                top: 55px;
+                left: -6%;
+                transform: rotate(-90deg);
+            }
+        }
+        ul {
+            li {
+                display: flex;
+                line-height: 1;
+                gap: 3px;
+                &:not(:last-child) {
+                    margin-bottom: 7px;
+                }
+            }
+        }
+        h6 {
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        &:hover {
+            .info-hover-content {
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+        }
+    }
+    .keyboard-icon {
+        top: 24px;
+    }
+    input.form-control {
+        padding-left: 20px;
+        padding-right: 64px;
+    }
+    .not-strong-sine,
+    .strong-sine {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 4px;
+        .strong-text {
+            font-weight: 500;
+        }
+        .strong-list {
+            display: flex;
+            gap: 20px;
+            li {
+                font-size: 14px;
+                color: #3b3c4a;
+                display: flex;
+                gap: 3px;
+                align-items: center;
+                .close-icon {
+                    width: 20px;
+                }
+                .check-icon {
+                    display: none;
+                }
+            }
+        }
+        .not-strong {
+            color: #ff920f;
+        }
+        .strong-true {
+            display: none;
+        }
+    }
+    .strong-sine {
+        .strong-true {
+            color: #14a800;
+            display: block !important;
+        }
+        .not-strong {
+            display: none;
+        }
+        .check-icon {
+            width: 24px;
+            display: block !important;
+        }
+        .close-icon {
+            display: none;
+        }
+    }
+    .button-wrapper {
+        margin-top: 35px;
+    }
+}
+.cmn-wrapper {
+    .error-sine {
+        .error-text {
+            display: flex !important;
+            align-items: center;
+            gap: 8px;
+            color: #ff1011;
+            font-weight: 500;
+            font-size: 15px;
+            padding-block: 10px;
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
+// update password end
