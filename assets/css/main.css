@@ -217,7 +217,7 @@ ul {
   margin-bottom: 20px;
 }
 .cmn-wrapper .form-group .error-text {
-  display: none !important;
+  display: none;
 }
 .cmn-wrapper .left-email-icon {
   position: absolute;
@@ -354,7 +354,7 @@ ul {
   }
 }
 .admin-login-main .keyboard-icon,
-.admin-login-main .keyboard-icon {
+.admin-login-main .keyboard-icon2 {
   width: 45px;
   height: 50px;
   border: 1px solid #001600;
@@ -371,7 +371,7 @@ ul {
 }
 @media (max-width: 991px) {
   .admin-login-main .keyboard-icon,
-  .admin-login-main .keyboard-icon {
+  .admin-login-main .keyboard-icon2 {
     display: none;
   }
 }
@@ -593,6 +593,8 @@ ul {
 .keyboard {
   position: fixed;
   width: 450px;
+  top: 42.6%;
+  left: 38.3%;
   padding: 5px 0;
   background: #0a52bb;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
@@ -718,7 +720,8 @@ ul {
   opacity: 1 !important;
   visibility: visible !important;
 }
-.update-pass .keyboard-icon {
+.update-pass .keyboard-icon,
+.update-pass .keyboard-icon2 {
   top: 24px;
 }
 .update-pass input.form-control {
@@ -750,12 +753,10 @@ ul {
   align-items: center;
 }
 .update-pass .not-strong-sine .strong-list li .close-icon,
-.update-pass .strong-sine .strong-list li .close-icon {
-  width: 20px;
-}
 .update-pass .not-strong-sine .strong-list li .check-icon,
+.update-pass .strong-sine .strong-list li .close-icon,
 .update-pass .strong-sine .strong-list li .check-icon {
-  display: none;
+  width: 20px;
 }
 .update-pass .not-strong-sine .not-strong,
 .update-pass .strong-sine .not-strong {
@@ -763,6 +764,7 @@ ul {
 }
 .update-pass .not-strong-sine .strong-true,
 .update-pass .strong-sine .strong-true {
+  color: #26b603;
   display: none;
 }
 .update-pass .strong-sine .strong-true {
@@ -784,7 +786,7 @@ ul {
 }
 
 .cmn-wrapper .error-sine .error-text {
-  display: flex !important;
+  display: flex;
   align-items: center;
   gap: 8px;
   color: #ff1011;
@@ -795,4 +797,30 @@ ul {
 .cmn-wrapper .error-sine .error-text img {
   width: 16px;
   height: 16px;
+}
+
+.numberError .check-icon {
+  display: block;
+}
+.numberError .close-icon {
+  display: none;
+}
+.numberError.hasNotNumber .check-icon {
+  display: none;
+}
+.numberError.hasNotNumber .close-icon {
+  display: block;
+}
+
+.symbolError .check-icon {
+  display: block;
+}
+.symbolError .close-icon {
+  display: none;
+}
+.symbolError.hasNotSymbol .check-icon {
+  display: none;
+}
+.symbolError.hasNotSymbol .close-icon {
+  display: block;
 }

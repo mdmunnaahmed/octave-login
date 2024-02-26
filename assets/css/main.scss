@@ -187,7 +187,7 @@ ul {
         position: relative;
         margin-bottom: 20px;
         .error-text {
-            display: none !important;
+            display: none;
         }
     }
     .left-email-icon {
@@ -318,7 +318,7 @@ ul {
         }
     }
     .keyboard-icon,
-    .keyboard-icon {
+    .keyboard-icon2 {
         width: 45px;
         height: 50px;
         border: 1px solid #001600;
@@ -540,8 +540,9 @@ ul {
 // virtual keyboard start
 .keyboard {
     position: fixed;
-
     width: 450px;
+    top: 42.6%;
+    left: 38.3%;
     padding: 5px 0;
     background: #0a52bb;
     box-shadow: 0 10px 25px rgb(0 0 0 / 40%);
@@ -669,7 +670,8 @@ ul {
             }
         }
     }
-    .keyboard-icon {
+    .keyboard-icon,
+    .keyboard-icon2 {
         top: 24px;
     }
     input.form-control {
@@ -694,11 +696,9 @@ ul {
                 display: flex;
                 gap: 3px;
                 align-items: center;
-                .close-icon {
-                    width: 20px;
-                }
+                .close-icon,
                 .check-icon {
-                    display: none;
+                    width: 20px;
                 }
             }
         }
@@ -706,6 +706,7 @@ ul {
             color: #ff920f;
         }
         .strong-true {
+            color: #26b603;
             display: none;
         }
     }
@@ -732,7 +733,7 @@ ul {
 .cmn-wrapper {
     .error-sine {
         .error-text {
-            display: flex !important;
+            display: flex;
             align-items: center;
             gap: 8px;
             color: #ff1011;
@@ -747,3 +748,36 @@ ul {
     }
 }
 // update password end
+
+.numberError {
+    .check-icon {
+        display: block;
+    }
+    .close-icon {
+        display: none;
+    }
+    &.hasNotNumber {
+        .check-icon {
+            display: none;
+        }
+        .close-icon {
+            display: block;
+        }
+    }
+}
+.symbolError {
+    .check-icon {
+        display: block;
+    }
+    .close-icon {
+        display: none;
+    }
+    &.hasNotSymbol {
+        .check-icon {
+            display: none;
+        }
+        .close-icon {
+            display: block;
+        }
+    }
+}
